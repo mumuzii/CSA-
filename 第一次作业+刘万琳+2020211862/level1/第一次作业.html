@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            text-align: center;
+
+        }
+
+        .sign-container {
+            margin: 10px;
+            padding-left: 300px;
+            padding-right: 300px;
+
+        }
+
+        .flex-tabs {
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            width: 500px;
+        }
+
+        .tabs-1 {
+            width: 80px;
+            height: 60px;
+            margin: 20px;
+            padding: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: rgb(85, 85, 85);
+        }
+
+        .tabs-2 {
+            width: 64px;
+            height: 60px;
+            color: rgb(85, 85, 85);
+            margin: 20px;
+            padding: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .pic {
+            width: 52px;
+            height: 52px;
+            margin: 20px;
+            padding: 5px;
+            margin-left: 80px;
+
+        }
+
+        .flex-phonenum {
+            background-color: white;
+            display: flex;
+
+            width: 500px;
+            justify-content: center;
+        }
+
+        #kuang {
+            width: 360px;
+            height: 30px;
+            margin: 20px;
+            border: 0;
+            border-bottom: solid;
+            border-bottom-color: rgb(240, 240, 240);
+            color: rgb(189, 203, 226);
+            font-size: 16px;
+        }
+
+        .flex-password {
+            background-color: white;
+            display: flex;
+
+            width: 500px;
+            justify-content: center;
+        }
+
+        #psd {
+            width: 339px;
+            height: 30px;
+            font-size: 16px;
+            margin-bottom: 10px;
+            border: 0;
+            border-bottom: solid;
+            border-bottom-color: rgb(240, 240, 240);
+            color: rgb(189, 203, 226);
+        }
+
+        .mm {
+
+            border: 0;
+            border-bottom: solid;
+            border-bottom-color: rgb(240, 240, 240);
+            height: 32px;
+        }
+
+        .flex-other {
+            background-color: white;
+            display: flex;
+            width: 500px;
+            justify-content: center;
+
+
+        }
+
+        #LINK {
+            color: rgb(99, 138, 186);
+            text-decoration: none;
+        }
+
+        .lian {
+            width: 120px;
+            display: flex;
+            justify-content: center;
+            padding-right: 55px;
+        }
+
+        .another {
+            width: 64px;
+            display: flex;
+            justify-content: right;
+            color: rgb(159, 168, 185);
+            padding-left: 130px;
+        }
+
+        .button {
+            width: 500px;
+        }
+
+        #button {
+            width: 364px;
+            height: 45px;
+            color: rgb(224, 237, 255);
+            font-size: 16px;
+            margin: 30px;
+            background-color: rgb(0, 102, 255);
+            border: 0;
+        }
+
+        .flex-attention {
+            background-color: white;
+            display: flex;
+
+            width: 500px;
+            justify-content: center;
+        }
+
+        p {
+            width: 364px;
+            color: rgb(164, 164, 164);
+            border-bottom: solid;
+            border-bottom-color: rgb(240, 240, 240);
+            text-align: left;
+        }
+
+        .flex-shejiao {
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            width: 500px;
+        }
+
+        .zhanghao {
+            width: 100px;
+            height: 60px;
+            margin: 5px;
+
+            padding-right: 30px;
+            display: flex;
+
+            color: rgb(155, 164, 182);
+        }
+
+        .wei {
+            height: 60px;
+            margin: 5px;
+            padding-left: 30px;
+
+        }
+
+        .qq {
+            height: 60px;
+            margin: 5px;
+        }
+
+        .bo {
+            height: 60px;
+            margin: 5px;
+        }
+
+        .xin {
+            font-size: 15px;
+            padding-left: 5px;
+            color: rgb(159, 168, 185);
+        }
+
+        .q {
+            font-size: 15px;
+            padding-left: 5px;
+            color: rgb(159, 168, 185);
+
+        }
+
+        .wb {
+            font-size: 15px;
+            padding-left: 5px;
+            color: rgb(159, 168, 185);
+
+        }
+
+        .flex-last {
+            padding-left: 70px;
+            display: flex;
+            width: 500px;
+            height: 50px;
+
+        }
+
+        #LINK1 {
+            color: rgb(64, 140, 253);
+            text-decoration: none;
+        }
+
+        #LINK2 {
+            color: rgb(64, 140, 253);
+            text-decoration: none;
+
+        }
+
+        .gou {
+            background-color: rgb(246, 246, 246);
+            padding-top: 15px;
+
+        }
+
+        .kaitong {
+            background-color: rgb(246, 246, 246);
+            padding-right: 84px;
+            width: 140px;
+            text-align: left;
+            padding-top: 15px;
+        }
+
+        .zhihu {
+            background-color: rgb(246, 246, 246);
+            padding-top: 15px;
+
+        }
+
+        .download {
+            background-color: rgb(246, 246, 246);
+            width: 100px;
+            text-align: left;
+            vertical-align: middle;
+            padding-top: 15px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="sign-container">
+
+        <form class="login-content">
+            <div class="flex-tabs">
+                <div class="tabs-1" role="button" tabindex="0">
+                    免密码登录
+                </div>
+                <div class="tabs-2" role="button" tabindex="0">
+                    密码登录
+                </div>
+                <div class="pic">
+                    <img src="erweima.png" alt="0" width="52px" height="52px">
+                </div>
+            </div>
+            <div class="flex-phonenum">
+                <input type="text" id="kuang" placeholder="手机号或邮箱">
+            </div>
+            <div class="flex-password">
+                <input type="passwprd" id="psd" placeholder="密码">
+                <div class="mm">
+                    <img src="密码.svg" alt="1" width="25px" id="m">
+                </div>
+            </div>
+
+            <div class="flex-other">
+                <div class="lian">
+                    <a href="#" id="LINK">海外手机号登录</a>
+                </div>
+                <div class="another">
+                    忘记密码
+                </div>
+            </div>
+            <div class="button">
+                <input type="button" id="button" value="登录">
+            </div>
+            <div class="flex-attention">
+                <p>未注册手机验证后自动登录，注册即代表同意《知乎协议》《隐私保护指引》</p>
+            </div>
+            <div class="flex-shejiao">
+                <div class="zhanghao" role="button" tabindex="0">
+                    社交账号登录
+                </div>
+                <div class="wei">
+                    <img src="微信.svg" alt="2" width="20px"><span class="xin">微信</span>
+                </div>
+                <div class="qq">
+                    <img src="qq.svg" alt="3" width="20px"><span class="q">QQ</span>
+                </div>
+                <div class="bo">
+                    <img src="微博.svg" alt="4" width="20px"><span class="wb">微博</span>
+                </div>
+            </div>
+            <div class="flex-last">
+                <div class="gou">
+                    <img src="勾选.svg" alt="5" width="20px">
+                </div>
+                <div class="kaitong">
+                    <a href="#" id="LINK1">开通机构号</a>
+                </div>
+                <div class="zhihu">
+                    <img src="知乎.svg" alt="6" width="20px">
+                </div>
+                <div class="download">
+                    <a href="#" id="LINK2">下载知乎APP</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
