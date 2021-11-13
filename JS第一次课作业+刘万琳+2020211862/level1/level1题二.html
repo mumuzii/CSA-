@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>2.写一个排序算法，对传入数组进行升序排序。</p>
+    <script>
+        var arr = [1, 5, 4, 8, 2, 6, 3, 9, 7];
+
+        function mySort(arr) {
+            var t;
+            var i;
+            var j;
+            len = arr.length;
+            for(i=0;i<len-1;i++)
+            {
+                for(j=0;j<len-1;j++)
+                {
+                    if(arr[j]>arr[j+1])
+                    {
+                        t=arr[j+1];
+                        arr[j+1]=arr[j];
+                        arr[j] = t;
+                    }
+                }
+            }
+            console.log(arr);
+            //code
+        }
+        console.log(mySort(arr)); //[1,2,3,4,5,6,7,8,9]
+    </script>
+</body>
+</html>
