@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="father" style="width: 200px;height: 200px;background: blue;">
+        <p id="child" style="width: 100px;height: 100px;background: red;"></p>
+    </div>
+</body>
+<script>
+          let father = document.querySelector("#father");
+          let child = father.children[0];
+          father.onclick = function () {
+            console.log("点击了父元素");
+          }
+          child.onclick = function () {
+            console.log("点击了子元素");
+          }
+    
+                //如果点击红色部分，则会先输出点击了子元素，后输出点击了父元素；因为JS绑定的事件会默认在冒泡阶段执行
+                //如果点击蓝色部分，则只输出点击了父元素
+</script>
+
+</html>

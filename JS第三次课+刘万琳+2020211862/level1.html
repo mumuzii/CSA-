@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			#col{
+				width: 300px;
+				height: 100px;
+				background-color: #ccc;
+			}
+		</style>
+	</head>
+	<body>
+		<button onclick="getCol('black')">黑色</button>
+		<button onclick="getCol('red')">红色</button>
+		<button onclick="getCol('purple')">紫色</button>
+		<div id="col"></div>
+		
+		<script>
+			
+			function getCol(cole) {
+				document.getElementById("col").style.background = cole;
+			}
+			
+		</script>
+	</body>
+</html>

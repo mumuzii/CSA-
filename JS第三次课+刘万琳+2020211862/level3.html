@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            padding: 100px;
+        }
+
+        textarea {
+            width: 200px;
+            height: 100px;
+            border: 1px solid #000;
+            outline: none;
+            resize: none;
+        }
+
+        ul {
+            margin-top: 50px;
+        }
+
+        li {
+            width: 300px;
+            padding: 5px;
+            background-color: rgb(245, 209, 243);
+            color: red;
+            font-size: 14px;
+            margin: 15px 0;
+        }
+
+        li a {
+            float: right;
+            width: 40px;
+            height: 20px;
+            text-align: center;
+            text-decoration: none;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            color: #000;
+        }
+    </style>
+
+</head>
+
+<body>
+    <textarea name="" id="" cols="30" rows="10"></textarea>
+    <button>发表留言</button>
+    <ul></ul>
+</body>
+
+</html>
+
+<script>
+    //点击按钮之后 就动态创建一个li 添加到ul里面
+    //创建li的同时 把文本域里面的值通过li.innerHTML赋值给li
+
+    //获取元素
+    var text = document.querySelector('textarea');
+    var btn = document.querySelector('button');
+    var ul = document.querySelector('ul');
+    //创建事件
+    btn.onclick = function () {
+        if (text.value == '') {
+            return false;
+        } else {
+            //1.创建li
+            var li = document.createElement('li');
+            //先有li 再赋值  
+            li.innerHTML = text.value + '<a href="javascript:;" rel="external nofollow" >删除</a>';
+
+            //2.添加li
+            ul.appendChild(li); //在后面追加
+            // ul.insertBefore(li,ul.children[0]); 动态在前面追加
+
+            //3.删除元素 删除当前链接的li 他的父亲
+            var as = document.querySelectorAll('a');
+            for (var i = 0; i < as.length; i++) {
+                as[i].onclick = function () {
+                    // 删除当前a的父亲li  li的父亲是ul  
+                    //删除节点语法 父节点.removeChild(子节点)
+                    ul.removeChild(this.parentNode);
+                }
+            }
+        }
+    }
+</script>
